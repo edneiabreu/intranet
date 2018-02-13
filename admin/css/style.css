@@ -1,0 +1,40 @@
+
+
+
+/* GRID LAYOUT - FORMATAÇÃO DA PAGINA  */
+/* fonte: /* fonte: http://blog.matheuscastiglioni.com.br/criando-layouts-com-css-grid-layout */
+
+body {
+  display: grid;
+  font-family: Arial, sans-serif;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 100vh auto;
+}
+
+.o-header {
+  grid-area: header;
+  padding: 2rem;
+}
+
+.o-aside {
+  grid-area: aside;
+}
+
+.o-main {
+  grid-area: main;
+}
+
+.o-footer {
+  grid-area: footer;
+  padding: 1rem;
+}
+
+.o-header, .o-aside, .o-main, .o-footer {
+  background: #eeeeee ;
+  color: black;
+}
